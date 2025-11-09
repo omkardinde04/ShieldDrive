@@ -6,6 +6,8 @@ A web-based secure file vault that ensures your files remain protected with ente
 
 ## 🎓 Project Information
 
+**Live demo:** https://sheildrive.vercel.app/
+
 **Course:** Computer Systems & Security (CSF) Lab - Continuous Assessment 2
 
 **Institution:** K.J. Somaiya College of Engineering
@@ -101,13 +103,46 @@ npm run dev
 ```
 ShieldDrive/
 ├── src/
-│   ├── components/     # React components
-│   ├── lib/           # Utility functions and helpers
-│   ├── hooks/         # Custom React hooks
-│   ├── pages/         # Application pages
-│   └── types/         # TypeScript type definitions
-├── public/            # Static assets
-└── README.md
+│   ├── components/          # Reusable React components
+│   │   ├── auth/           # Authentication components
+│   │   ├── files/          # File management components
+│   │   ├── ui/             # shadcn-ui components
+│   │   └── layout/         # Layout components
+│   │
+│   ├── lib/                # Utility functions and helpers
+│   │   ├── crypto.ts       # Encryption/decryption utilities
+│   │   ├── api.ts          # API client functions
+│   │   ├── validation.ts   # Zod validation schemas
+│   │   └── utils.ts        # General utilities
+│   │
+│   ├── hooks/              # Custom React hooks
+│   │   ├── useAuth.ts      # Authentication hook
+│   │   ├── useFiles.ts     # File management hook
+│   │   └── useToast.ts     # Notification hook
+│   │
+│   ├── pages/              # Application pages
+│   │   ├── Login.tsx       # Login page
+│   │   ├── Register.tsx    # Registration page
+│   │   ├── Dashboard.tsx   # Main dashboard
+│   │   └── FileView.tsx    # File detail view
+│   │
+│   ├── types/              # TypeScript type definitions
+│   │   ├── user.ts         # User-related types
+│   │   ├── file.ts         # File-related types
+│   │   └── api.ts          # API response types
+│   │
+│   ├── App.tsx             # Root component
+│   └── main.tsx            # Application entry point
+│
+├── public/                 # Static assets
+│   ├── icons/
+│   └── images/
+│
+├── package.json            # Dependencies and scripts
+├── tsconfig.json           # TypeScript configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── vite.config.ts          # Vite build configuration
+└── README.md               # Project documentation
 ```
 
 ## 🔒 Security Best Practices
